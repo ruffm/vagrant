@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# https://docs.vagrantup.com.
+
+Vagrant.configure("2") do |config|
+  config.vm.box = " " # put maker/name here
+  config.vm.box_version = " " # put version # here
+  config.vm.provision :shell, path: " " # path to config file here, can work with Puppet/Docker/etc.
+  config.vm.network :forwarded_port, guest:, host: # ports to forward here
+  # config.vm.network "forwarded_port", guest: 80, host: 8080 # or like this
+  # config.vm.network "private_network", ip: "192.168.33.10"# Create a private network, which allows host-only
+  # config.vm.network "public_network"   # Create a public network, which generally matched to bridged network.
+  # config.vm.synced_folder "../data", "/vagrant_data" # shares additional folder to guest vm, host/path/to/folder guest/path/to/folder 
+
+  config.vm.provider "virtualbox" do |vb| # config options for VBox https://www.virtualbox.org/manual/ch08.html#idm3803
+  # v.name = " " # name here
+  # vb.gui = true # Display the VirtualBox GUI when booting the machine
+  # vb.memory = 1024 # Customize the amount of memory on the VM:
+  # v.cpus = # set num of cpus
+  end
+
+  # config.push.define "atlas" do |push| # push options https://docs.vagrantup.com/v2/push/atlas.html
+  #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
+  # end
+
+end
