@@ -16,11 +16,25 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data" # shares additional folder to guest vm, host/path/to/folder guest/path/to/folder 
 
   config.vm.provider "virtualbox" do |vb| # config options for VBox https://www.virtualbox.org/manual/ch08.html#idm3803
-  # v.name = " " # name here
-  # vb.gui = true # Display the VirtualBox GUI when booting the machine
-  # vb.memory = 1024 # Customize the amount of memory on the VM:
-  # v.cpus = # set num of cpus
+  #  v.name = " " # name here
+  #  vb.gui = true # Display the VirtualBox GUI when booting the machine
+  #  vb.memory = 1024 # Customize the amount of memory on the VM:
+  #  v.cpus = # set num of cpus
   end
+
+  # config.vm.provider "vmware_fusion" do |v| # for vmware_fusion
+  #  v.linked_clone = false 
+  #  v.gui = true # or false
+  #  v.vmx["memsize"] = "1024" # set memory
+  #  v.vmx["numvcpus"] = "2" # set num cpus
+  # end
+
+  # config.vm.provider "vmware_workstation" do |v| # for vmware_workstation
+  #  v.linked_clone = false 
+  #  v.gui = true # or false
+  #  v.vmx["memsize"] = "1024" # set memory
+  #  v.vmx["numvcpus"] = "2" # set num cpus  
+  # end
 
   # config.push.define "atlas" do |push| # push options https://docs.vagrantup.com/v2/push/atlas.html
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
