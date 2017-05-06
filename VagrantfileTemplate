@@ -36,6 +36,12 @@ Vagrant.configure("2") do |config|
   #  v.vmx["numvcpus"] = "2" # set num cpus  
   # end
 
+  # config.vm.provider "docker" do |d| # for docker https://www.vagrantup.com/docs/docker/configuration.html
+  #  d.image = " " # put path to image here, for building off an image
+  #  d.build_dir = "." # looks for dockerfile in same dir as vagrantfile, then builds dockerfile and starts container
+  #  d.vagrant_vagrantfile = "path/to/vagrantfile" # points to any vagrantfile, instead of simply using boot2docker
+  # end
+
   # config.push.define "atlas" do |push| # push options https://docs.vagrantup.com/v2/push/atlas.html
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
