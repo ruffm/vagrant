@@ -10,30 +10,30 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest:, host: # ports to forward here
   # config.vm.network "forwarded_port", guest: 80, host: 8080 # or like this
   # config.vm.network "private_network", ip: "192.168.33.10", virtualbox__intnet: true # Create a private network, which allows host-only
-  # config.vm.network "private_network", ip: "192.168.33.10", virtualbox__intnet: "netName" # joins specific internal network 
+  # config.vm.network "private_network", ip: "192.168.33.10", virtualbox__intnet: "netName" # joins specific internal network
   # config.vm.network "public_network"   # Create a public network, which generally matched to bridged network.
   # config.vm.network "private_network", ip: "192.168.33.10", nic_type: "type" # be careful with this, according to the docs, VBox specific
-  # config.vm.synced_folder "../data", "/vagrant_data" # shares additional folder to guest vm, host/path/to/folder guest/path/to/folder 
+  # config.vm.synced_folder "../data", "/vagrant_data" # shares additional folder to guest vm, host/path/to/folder guest/path/to/folder
 
   config.vm.provider "virtualbox" do |vb| # config options for VBox https://www.virtualbox.org/manual/ch08.html#idm3803
-  #  v.name = " " # name here
+  #  vb.name = " " # name here
   #  vb.gui = true # Display the VirtualBox GUI when booting the machine
   #  vb.memory = 1024 # Customize the amount of memory on the VM:
-  #  v.cpus = # set num of cpus
+  #  vb.cpus = # set num of cpus
   end
 
   # config.vm.provider "vmware_fusion" do |v| # for vmware_fusion
-  #  v.linked_clone = false 
+  #  v.linked_clone = false
   #  v.gui = true # or false
   #  v.vmx["memsize"] = "1024" # set memory
   #  v.vmx["numvcpus"] = "2" # set num cpus
   # end
 
   # config.vm.provider "vmware_workstation" do |v| # for vmware_workstation
-  #  v.linked_clone = false 
+  #  v.linked_clone = false
   #  v.gui = true # or false
   #  v.vmx["memsize"] = "1024" # set memory
-  #  v.vmx["numvcpus"] = "2" # set num cpus  
+  #  v.vmx["numvcpus"] = "2" # set num cpus
   # end
 
   # config.vm.provider "docker" do |d| # for docker https://www.vagrantup.com/docs/docker/configuration.html
